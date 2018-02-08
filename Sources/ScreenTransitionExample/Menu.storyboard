@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="rKz-iD-bOg">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="ggk-iZ-r2C">
+            <objects>
+                <viewController id="rKz-iD-bOg" customClass="MenuViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TdV-Qv-UFg"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIH-Qg-PBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zI3-50-yJi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZP-GD-g2g">
+                                <rect key="frame" x="8" y="380" width="359" height="30"/>
+                                <state key="normal" title="close"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVE-ZC-lUn">
+                                <rect key="frame" x="7.5" y="318" width="359" height="30"/>
+                                <state key="normal" title="open (.fullScreen)"/>
+                                <connections>
+                                    <segue destination="X55-T1-fDT" kind="presentation" modalPresentationStyle="fullScreen" id="TQc-LN-bOK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTN-WI-4nc">
+                                <rect key="frame" x="7.5" y="256" width="359" height="30"/>
+                                <state key="normal" title="open (.overCurrentContext)"/>
+                                <connections>
+                                    <segue destination="X55-T1-fDT" kind="presentation" modalPresentationStyle="overCurrentContext" id="jVT-6h-5rH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KVE-ZC-lUn" firstAttribute="width" secondItem="zI3-50-yJi" secondAttribute="width" constant="-16" id="344-8d-ROW"/>
+                            <constraint firstItem="uTN-WI-4nc" firstAttribute="centerX" secondItem="KVE-ZC-lUn" secondAttribute="centerX" id="5qh-UX-p6f"/>
+                            <constraint firstItem="2ZP-GD-g2g" firstAttribute="centerX" secondItem="zI3-50-yJi" secondAttribute="centerX" id="61H-e5-BjO"/>
+                            <constraint firstItem="2ZP-GD-g2g" firstAttribute="top" secondItem="KVE-ZC-lUn" secondAttribute="bottom" constant="32" id="6T0-VP-ejV"/>
+                            <constraint firstItem="2ZP-GD-g2g" firstAttribute="centerX" secondItem="KVE-ZC-lUn" secondAttribute="centerX" id="AjS-ZW-XnC"/>
+                            <constraint firstItem="KVE-ZC-lUn" firstAttribute="centerX" secondItem="zI3-50-yJi" secondAttribute="centerX" id="Dus-o3-TPT"/>
+                            <constraint firstItem="KVE-ZC-lUn" firstAttribute="centerY" secondItem="zI3-50-yJi" secondAttribute="centerY" id="Dya-Ll-xde"/>
+                            <constraint firstItem="uTN-WI-4nc" firstAttribute="width" secondItem="KVE-ZC-lUn" secondAttribute="width" id="QdV-Wo-UvL"/>
+                            <constraint firstItem="2ZP-GD-g2g" firstAttribute="width" secondItem="KVE-ZC-lUn" secondAttribute="width" id="hXG-jf-qUy"/>
+                            <constraint firstItem="KVE-ZC-lUn" firstAttribute="top" secondItem="uTN-WI-4nc" secondAttribute="bottom" constant="32" id="xbK-Mb-Art"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="2ZP-GD-g2g" id="f8g-KK-40Z"/>
+                        <outlet property="openFullScreen" destination="KVE-ZC-lUn" id="cjA-nd-xwp"/>
+                        <outlet property="openOverCurrent" destination="uTN-WI-4nc" id="DUU-V4-Mes"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQD-Va-fEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95" y="141"/>
+        </scene>
+        <!--Closable-->
+        <scene sceneID="xye-Cz-Xi2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Closable" id="X55-T1-fDT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gza-Xp-5uc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953" y="140"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TQc-LN-bOK"/>
+    </inferredMetricsTieBreakers>
+</document>

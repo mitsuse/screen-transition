@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zG5-bW-R22">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Closable View Controller-->
+        <scene sceneID="LUV-z8-08Z">
+            <objects>
+                <viewController id="zG5-bW-R22" customClass="ClosableViewController" customModule="ScreenTransitionExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oNn-hX-usN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qrc-hP-2W8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ntJ-qT-kja">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-mh-II8">
+                                <rect key="frame" x="8" y="318" width="359" height="30"/>
+                                <state key="normal" title="close"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="BEK-mh-II8" firstAttribute="centerX" secondItem="ntJ-qT-kja" secondAttribute="centerX" id="4TF-bv-XkB"/>
+                            <constraint firstItem="BEK-mh-II8" firstAttribute="width" secondItem="ntJ-qT-kja" secondAttribute="width" constant="-16" id="CBa-MY-d30"/>
+                            <constraint firstItem="BEK-mh-II8" firstAttribute="centerY" secondItem="ntJ-qT-kja" secondAttribute="centerY" id="HUM-DF-1Hy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="BEK-mh-II8" id="orp-wx-Ze7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dTF-kJ-zyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378" y="138"/>
+        </scene>
+    </scenes>
+</document>

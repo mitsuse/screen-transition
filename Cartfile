@@ -1,0 +1,2 @@
+git "git@github.com:mitsuse/box.git" ~> 0.2.0
+git "git@github.com:mitsuse/screen-container.git" ~> 0.1.0
