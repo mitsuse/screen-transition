@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   spec.source_files = 'Sources/ScreenTransition/**/*.swift'
   spec.framework = 'SystemConfiguration'
   spec.ios.framework = 'UIKit'
-  spec.dependency 'Box', '~> 0.2.0'
-  spec.dependency 'ScreenContainer', '~> 0.1.0'
-  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  spec.dependency 'Box', '~> 0.2.2'
+  spec.dependency 'ScreenContainer', '~> 0.2.1'
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 end
