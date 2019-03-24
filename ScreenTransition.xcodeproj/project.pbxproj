@@ -606,10 +606,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/backport-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/container-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/layout-anchor-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/layout-anchor-ios/Carthage/Checkouts/backport-ios/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sources/ScreenTransition/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -636,10 +632,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/backport-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/container-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/layout-anchor-ios/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Checkouts/layout-anchor-ios/Carthage/Checkouts/backport-ios/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Sources/ScreenTransition/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
