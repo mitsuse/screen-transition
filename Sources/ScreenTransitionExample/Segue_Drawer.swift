@@ -43,7 +43,7 @@ final class DrawerAnimation: Animation {
     private let offset: CGFloat
 
     let duration: Double = 0.6
-    let options: UIViewAnimationOptions = .curveEaseOut
+    let options: UIView.AnimationOptions = .curveEaseOut
 
     init(position: DrawerPosition, offset: CGFloat) {
         self.position = position

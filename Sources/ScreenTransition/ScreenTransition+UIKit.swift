@@ -43,7 +43,7 @@ extension Extension where Base: UIViewController {
         with configuration: Configuration,
         for viewController: @escaping @autoclosure () -> UIViewController
     ) -> NonInteractivePresenter<Configuration> {
-        return NonInteractivePresenter(configuration, from: base, to: viewController)
+        return NonInteractivePresenter(configuration, from: base, to: viewController())
     }
 
     public func presenter<Configuration: NonInteractiveConfiguration>(
@@ -59,7 +59,7 @@ extension Extension where Base: UIViewController {
         with configuration: Configuration,
         for viewController: @escaping @autoclosure () -> UIViewController
     ) -> InteractivePresenter<Configuration> {
-        return InteractivePresenter(configuration, from: base, to: viewController)
+        return InteractivePresenter(configuration, from: base, to: viewController())
     }
 
     public func presenter<Configuration: InteractiveConfiguration>(
