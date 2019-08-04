@@ -15,6 +15,6 @@ Pod::Spec.new do |spec|
   spec.framework = 'SystemConfiguration'
   spec.ios.framework = 'UIKit'
   spec.dependency 'Box', '~> 0.2.2'
-  spec.dependency 'ScreenContainer', '~> 0.2.1'
-  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  spec.dependency 'ScreenContainer', '~> 0.3.0'
+  spec.swift_version = '5.0'
 end
