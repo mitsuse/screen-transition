@@ -1,4 +1,4 @@
-## Unreleased
+## 0.4.0
 
 - Support Swift 5.1+.
 - Call `viewWillAppear`, `viewWillDisappear`, `viewDidAppear`, `viewDidDisappear` on transion. 
