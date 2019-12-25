@@ -57,6 +57,8 @@ public final class PanGestureRecognizer: UIPanGestureRecognizer, Progressive {
             self.current = self.location(in: self.view?.window)
         case .possible:
             break
+        @unknown default:
+            fatalError()
         }
     }
 
