@@ -38,6 +38,7 @@ final class Dismisser<Configuration: InteractiveConfiguration>: NSObject {
         switch gestureRecognizer.state {
         case .ended: presented.value?.dismiss(animated: true, completion: nil)
         case .began, .cancelled, .changed, .failed, .possible: break
+        @unknown default: fatalError()
         }
     }
 
@@ -58,6 +59,8 @@ final class Dismisser<Configuration: InteractiveConfiguration>: NSObject {
             interactiveTransitioning.value = nil
         case .possible:
             break
+        @unknown default:
+            fatalError()
         }
     }
 }

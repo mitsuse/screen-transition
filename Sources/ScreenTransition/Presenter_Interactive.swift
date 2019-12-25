@@ -45,6 +45,7 @@ public final class InteractivePresenter<Configuration: InteractiveConfiguration>
         switch gestureRecognizer.state {
         case .ended: presenting.value?.screenTransition.present(create(), with: configuration, completion: nil)
         case .began, .cancelled, .changed, .failed, .possible: break
+        @unknown default: fatalError()
         }
     }
 
@@ -65,6 +66,8 @@ public final class InteractivePresenter<Configuration: InteractiveConfiguration>
             interactiveTransitioning = nil
         case .possible:
             break
+        @unknown default:
+            fatalError()
         }
     }
 }
