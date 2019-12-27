@@ -25,7 +25,7 @@ final class PresentationTransitioning: NSObject, UIViewControllerAnimatedTransit
 
         autoresizingMaskTranslation.value = context.source.view.translatesAutoresizingMaskIntoConstraints
         context.prepare()
-        context.source.viewWillDisappear(true)
+        (context.source as? LayoutContainerViewController)?.content.viewWillDisappear(true)
         apply(firstScene, to: context, andClean: true)
 
         UIView.animate(
@@ -37,7 +37,7 @@ final class PresentationTransitioning: NSObject, UIViewControllerAnimatedTransit
                 let transitionCompleted = completed && !transitionContext.transitionWasCancelled
                 if transitionCompleted {
                     scene.value = lastScene
-                    context.source.viewDidDisappear(true)
+                    (context.source as? LayoutContainerViewController)?.content.viewDidDisappear(true)
                 } else {
                     unapply(lastScene)
                     context.source.view.translatesAutoresizingMaskIntoConstraints = autoresizingMaskTranslation.value
@@ -75,7 +75,7 @@ final class DismissalTransitioning: NSObject, UIViewControllerAnimatedTransition
 
         if let scene = scene.value { apply(scene, to: context, andClean: true) }
 
-        context.source.viewWillAppear(true)
+        (context.source as? LayoutContainerViewController)?.content.viewWillAppear(true)
 
         UIView.animate(
             withDuration: transitionDuration(using: transitionContext),
@@ -87,7 +87,7 @@ final class DismissalTransitioning: NSObject, UIViewControllerAnimatedTransition
                 unapply(firstScene)
                 if transitionCompleted {
                     context.source.view.translatesAutoresizingMaskIntoConstraints = autoresizingMaskTranslation.value
-                    context.source.viewDidAppear(true)
+                    (context.source as? LayoutContainerViewController)?.content.viewDidAppear(true)
                     context.complete()
                 } else {
                     if let scene = scene.value { apply(scene, to: context) }
