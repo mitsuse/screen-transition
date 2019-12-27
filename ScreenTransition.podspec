@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'ScreenTransition'
-  spec.version = '0.4.0'
+  spec.version = '0.4.1'
   spec.homepage = 'https://github.com/mitsuse/screen-transition'
   spec.authors = {
     'Tomoya Kose' => 'tomoya@mitsuse.jp',
