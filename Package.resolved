@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "box",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mitsuse/box",
+      "state" : {
+        "revision" : "a1fd8a5227e712fbe88a900f033a210e0c678982",
+        "version" : "0.5.0"
+      }
+    },
+    {
+      "identity" : "screen-container",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mitsuse/screen-container",
+      "state" : {
+        "revision" : "9e15ed49d9bb5bccd604289c29aab6012900654d",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}
