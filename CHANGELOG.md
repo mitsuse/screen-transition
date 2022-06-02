@@ -1,3 +1,8 @@
+## Unreleased
+
+- Support Swift Package Manager only.
+
+
 ## 0.4.0
 
 - Support Swift 5.1+.

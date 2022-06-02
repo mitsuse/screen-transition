@@ -1,3 +1,5 @@
+import UIKit
+
 public protocol Animation {
     var duration: Double { get }
     var options: UIView.AnimationOptions { get }
